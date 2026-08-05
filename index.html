@@ -3,13 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Career — Nigel Encalada</title>
-<meta name="description" content="The professional career of Nigel Encalada: cultural policy leadership, higher-education instruction, and international heritage work across two decades.">
+<title>Nigel Encalada — Cultural Heritage Expert · Applied Anthropologist</title>
+<meta name="description" content="Nigel Encalada is a cultural heritage expert, applied anthropologist, and UNESCO Global Facilitator with two decades of leadership in cultural policy and heritage-led development.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Marcellus&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>:root{ --accent:#b8791e; --accent-deep:#8a5713; }</style>
+<style>:root{ --accent:#1f8f7a; --accent-deep:#146254; }
+.hero-grid{ display:grid; gap:clamp(2rem,5vw,4rem); align-items:center; }
+@media (min-width:860px){
+  .hero-grid{ grid-template-columns: 1.5fr 1fr; }
+}
+.hero-portrait{ margin:0; position:relative; }
+.hero-portrait img{
+  width:100%; aspect-ratio:4/5; object-fit:cover;
+  border:1px solid var(--line);
+  border-bottom:4px solid var(--accent);
+  background:var(--stone-deep);
+  box-shadow:0 12px 30px -12px rgba(35,48,46,0.35);
+}
+/* graceful placeholder if the photo file isn't there yet */
+.hero-portrait img.missing{
+  min-height:340px;
+  display:flex;
+  position:relative;
+}
+.hero-portrait img.missing::after{
+  content:"Your photo here";
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-label); font-size:0.72rem; letter-spacing:0.18em;
+  text-transform:uppercase; color:var(--ink-soft);
+  background:var(--stone-deep);
+}
+@media (max-width:859px){
+  .hero-portrait{ max-width:320px; }
+}</style>
 </head>
 <body>
 
@@ -17,127 +46,165 @@
   <div class="inner">
     <a class="wordmark" href="index.html">Nigel Encalada</a>
     <nav class="primary" aria-label="Main navigation">
-      <a href="index.html">Home</a>
+      <a href="index.html" aria-current="page">Home</a>
       <a href="blog.html">Blog</a>
-      <a href="career.html" aria-current="page">Career</a>
+      <a href="career.html">Career</a>
       <a href="unesco.html">UNESCO</a>
       <a href="belize.html">Belize</a>
       <a href="recognition.html">Recognition</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <main>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <svg class="contours" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2">
+      <path d="M-50,520 C150,470 240,540 420,500 C600,460 690,530 900,480 C1060,442 1150,500 1260,470"/>
+      <path d="M-50,460 C160,400 260,480 440,430 C620,380 720,470 920,410 C1080,362 1160,430 1260,400"/>
+      <path d="M-50,395 C170,330 290,420 460,360 C640,300 750,400 940,340 C1100,290 1180,360 1260,330"/>
+      <path d="M-50,330 C180,260 320,360 480,290 C660,220 780,330 960,270 C1110,220 1190,290 1260,260"/>
+      <path d="M-50,265 C190,195 340,300 500,225 C670,150 800,265 980,205 C1120,158 1200,225 1260,195"/>
+      <path d="M-50,200 C200,135 360,240 520,165 C685,90 820,205 1000,145 C1130,100 1210,160 1260,135"/>
+      <circle cx="845" cy="255" r="3.5" fill="currentColor" stroke="none"/>
+      <path d="M845,255 L845,225 M845,255 L875,255" stroke-width="1"/>
+    </svg>
+
+    <div class="inner hero-grid">
+      <div class="hero-text">
+        <p class="role">Cultural Heritage Expert · Applied Anthropologist · Policy Specialist</p>
+        <h1>Living heritage as a foundation for development.</h1>
+        <p class="lede">
+          Nigel Encalada has spent more than two decades helping nations and communities
+          safeguard the cultures they have inherited — and turn them into engines of
+          education, identity, and sustainable growth. Former Director of Belize's
+          Institute for Social and Cultural Research, UNESCO Global Facilitator, and
+          Chairperson of the Evaluation Body of the UNESCO 2003 Convention for the
+          Safeguarding of Intangible Cultural Heritage (2023).
+        </p>
+        <p class="fieldmark">
+          <span>Belize · United States</span>
+          <span>20+ years in cultural heritage</span>
+          <span>Fieldwork &amp; missions in 15+ countries</span>
+        </p>
+      </div>
+
+      <!-- ==================================================================
+           YOUR PORTRAIT:
+           1. Put your photo in the "images" folder (create it if needed).
+           2. Change src below to your filename, e.g. images/nigel.jpg
+           3. Delete the class="portrait-placeholder" so the frame styling
+              switches to a real photo (or just leave it — it works either way).
+           A vertical/portrait photo ~800x1000px, saved as .jpg, looks best.
+           ================================================================== -->
+      <figure class="hero-portrait">
+        <img src="images/portrait.jpg" alt="Portrait of Nigel Encalada"
+             class="portrait-placeholder"
+             onerror="this.classList.add('missing')">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT TEASER ================= -->
+  <section class="band">
+    <div class="inner two-col">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>From the classroom to the Convention floor</h2>
+      </div>
+      <div class="prose">
+        <p>Nigel's career began in the classrooms of St. John's College in Belize City,
+        teaching history and economics to a generation of Belizean students. It grew
+        into national leadership — twelve years as Director of the Institute for Social
+        and Cultural Research at Belize's National Institute of Culture and History —
+        and then onto the international stage, advising governments across the
+        Caribbean and Latin America and chairing the twelve-member body that evaluates
+        nominations to UNESCO's lists of the world's living heritage.</p>
+        <p>Today he is a Ph.D. candidate in Applied Anthropology at the University of
+        South Florida, researching the nexus of <strong>development, heritage and
+        tourism</strong> in Small Island Developing States — from cruise-port economies
+        and cultural labor to heritage safeguarding in the face of disaster.</p>
+        <p><a class="btn ghost" href="career.html">Read the full career story</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURED WORK ================= -->
   <section class="band alt">
     <div class="inner">
-      <p class="eyebrow">Career</p>
-      <h2>The professional story</h2>
-      <div class="prose">
-        <p>Nigel Encalada is a cultural heritage expert and applied anthropologist
-        whose work spans the classroom, the national institution, and the international
-        convention. For more than two decades he has worked to safeguard living
-        heritage and to make the case that culture belongs at the center of
-        development — not at its margins.</p>
-        <p>He led Belize's Institute for Social and Cultural Research for twelve years,
-        coordinated the drafting of the country's first national culture policy, and
-        served as Belize's National Focal Point for the UNESCO 2003 Convention. That
-        national foundation carried him into international practice as a UNESCO Global
-        Facilitator, a consultant to Caribbean governments, and, in 2023, Chairperson
-        of the body that evaluates the world's nominations for intangible cultural
-        heritage. He is now completing a Ph.D. examining how development, heritage, and
-        tourism intersect in Small Island Developing States.</p>
+      <p class="eyebrow">Selected work</p>
+      <h2>Recent highlights</h2>
+
+      <div class="projects">
+        <article class="project">
+          <p class="where">Gales Point, Belize · Inscribed Dec 2025</p>
+          <h3>Christmas Bram &amp; Sambai of Gales Point</h3>
+          <p>Community Coordinator and Technical Expert (with S. Solis, ISCR and the
+          National Kriol Council) for the nomination of this Kriol musical tradition —
+          now inscribed on the UNESCO Representative List of the Intangible Cultural
+          Heritage of Humanity.</p>
+          <p class="impact">One of Belize's living traditions recognized on the world's
+          foremost register of intangible heritage.</p>
+        </article>
+
+        <article class="project">
+          <p class="where">Barbados · Inscribed Dec 2025</p>
+          <h3>The Landship of Barbados</h3>
+          <p>Technical expert to the Barbados Ministry of Culture, Office of the Prime
+          Minister, for the successful nomination of the Landship tradition to the
+          UNESCO Representative List of the Intangible Cultural Heritage of Humanity.</p>
+          <p class="impact">International recognition secured for a uniquely Barbadian
+          institution of community, performance, and mutual aid.</p>
+        </article>
+
+        <article class="project">
+          <p class="where">St. Kitts &amp; Nevis · 2023–2024</p>
+          <h3>Policy &amp; nomination for living heritage</h3>
+          <p>Consultant on the national Policy and Legislative Framework for Living
+          Cultural Heritage, and Technical Expert preparing the nomination of the
+          Masquerade traditions of St. Kitts and Nevis for possible inscription in
+          December 2027.</p>
+          <p class="impact">A national legal framework and a pathway to global
+          recognition for the federation's living culture.</p>
+        </article>
+
+        <article class="project">
+          <p class="where">Belize · 2022–2023</p>
+          <h3>Hurricane Lisa post-disaster assessment</h3>
+          <p>UNESCO Consultant for the culture sector of the Post-Disaster Needs
+          Assessment following Hurricane Lisa — part of a wider research and practice
+          focus on heritage, disaster risk, and resilience in Small Island Developing
+          States.</p>
+          <p class="impact">Culture counted in national recovery planning.</p>
+        </article>
       </div>
+
+      <p style="margin-top:2rem">
+        <a class="btn" href="unesco.html">UNESCO &amp; international work</a>
+        &nbsp;&nbsp;
+        <a class="btn ghost" href="belize.html">Foundations in Belize</a>
+      </p>
     </div>
   </section>
 
+  <!-- ================= BLOG TEASER ================= -->
   <section class="band">
     <div class="inner">
-      <p class="eyebrow">Timeline</p>
-      <h2>Positions &amp; milestones</h2>
-
-      <div class="timeline">
-
-        <div class="tl-item">
-          <p class="tl-when">2024 — present</p>
-          <div class="tl-body">
-            <h3>Ph.D. Student</h3>
-            <p class="org">Department of Anthropology · University of South Florida</p>
-            <p>Researching Development, Heritage and Tourism in Small Island Developing
-            States.</p>
-          </div>
-        </div>
-
-        <div class="tl-item">
-          <p class="tl-when">2014 — 2024</p>
-          <div class="tl-body">
-            <h3>UNESCO Global Facilitator</h3>
-            <p class="org">International consultancy</p>
-            <p>International heritage missions, evaluations, and technical assistance.</p>
-            <ul>
-              <li>Chaired the Evaluation Body of the UNESCO 2003 Convention (2023)</li>
-              <li>Technical expert on Belize and Barbados nominations inscribed in 2025</li>
-              <li>Consultant on living-heritage policy for St. Kitts &amp; Nevis</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="tl-item">
-          <p class="tl-when">2009 — 2021</p>
-          <div class="tl-body">
-            <h3>Director, Institute for Social and Cultural Research (ISCR)</h3>
-            <p class="org">National Institute of Culture and History (NICH) · Belize</p>
-            <p>Led Belize's national body for social and cultural research for twelve
-            years — directing research, publications, heritage safeguarding, and
-            national cultural policy.</p>
-            <ul>
-              <li>Coordinated and co-drafted the Belize National Cultural Policy 2016–2026</li>
-              <li>Served as Belize's National Focal Point for the UNESCO 2003 Convention (2012–2021)</li>
-              <li>Founded and edited the <em>Research Reports in Belizean History and Anthropology</em> series</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="tl-item">
-          <p class="tl-when">2007 — 2009</p>
-          <div class="tl-body">
-            <h3>Director, Belizean Studies Resource Center</h3>
-            <p class="org">St. John's College · Belize City</p>
-            <p>Directed the resource center and co-edited the <em>Journal of Belizean
-            Studies</em>, building scholarly infrastructure for the study of Belizean
-            history and society.</p>
-          </div>
-        </div>
-
-        <div class="tl-item">
-          <p class="tl-when">1997 — 2024</p>
-          <div class="tl-body">
-            <h3>Lecturer &amp; Adjunct Lecturer</h3>
-            <p class="org">St. John's College · University of Belize · Galen University · Wesley Junior College</p>
-            <p>More than two decades of higher-education teaching in Belizean and
-            Caribbean history, micro- and macroeconomics, research methods, and global
-            affairs — training students and teachers-in-training alike.</p>
-          </div>
-        </div>
-
-        <div class="tl-item">
-          <p class="tl-when">Education</p>
-          <div class="tl-body">
-            <h3>Ph.D., Applied Anthropology · M.Ed. · B.A.</h3>
-            <p class="org">USF · University of North Florida · Rockhurst University</p>
-            <p>Ph.D. in Applied Anthropology (Development, Heritage &amp; Tourism), in
-            progress, University of South Florida. M.Ed. in Educational Leadership
-            (2007), University of North Florida. B.A. in Global Studies — History,
-            Economics, Political Science (2001), Rockhurst University; Alpha Sigma Nu
-            Honor Society, top 4%.</p>
-          </div>
-        </div>
-
-      </div>
+      <p class="eyebrow">The blog</p>
+      <h2>Development, Heritage &amp; Tourism</h2>
+      <p class="prose">Field notes and commentary on the questions that animate the
+      work: how tourism economies capture — or leak — value; how living heritage
+      survives disasters and demographic change; and how culture earns its place in
+      development policy.</p>
+      <p style="margin-top:1.6rem"><a class="btn ghost" href="blog.html">Read the latest posts</a></p>
     </div>
   </section>
+
 </main>
 
+<!-- ================= FOOTER / CONTACT ================= -->
 <footer class="site-footer" id="contact">
   <div class="inner">
     <div>

@@ -1,225 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nigel Encalada — Cultural Heritage Expert · Applied Anthropologist</title>
-<meta name="description" content="Nigel Encalada is a cultural heritage expert, applied anthropologist, and UNESCO Global Facilitator with two decades of leadership in cultural policy and heritage-led development.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Marcellus&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{ --accent:#1f8f7a; --accent-deep:#146254; }
-.hero-grid{ display:grid; gap:clamp(2rem,5vw,4rem); align-items:center; }
-@media (min-width:860px){
-  .hero-grid{ grid-template-columns: 1.5fr 1fr; }
-}
-.hero-portrait{ margin:0; position:relative; }
-.hero-portrait img{
-  width:100%; aspect-ratio:4/5; object-fit:cover;
-  border:1px solid var(--line);
-  border-bottom:4px solid var(--accent);
-  background:var(--stone-deep);
-  box-shadow:0 12px 30px -12px rgba(35,48,46,0.35);
-}
-/* graceful placeholder if the photo file isn't there yet */
-.hero-portrait img.missing{
-  min-height:340px;
-  display:flex;
-  position:relative;
-}
-.hero-portrait img.missing::after{
-  content:"Your photo here";
-  position:absolute; inset:0;
-  display:flex; align-items:center; justify-content:center;
-  font-family:var(--font-label); font-size:0.72rem; letter-spacing:0.18em;
-  text-transform:uppercase; color:var(--ink-soft);
-  background:var(--stone-deep);
-}
-@media (max-width:859px){
-  .hero-portrait{ max-width:320px; }
-}</style>
-</head>
-<body>
+# Nigel Encalada — Professional Website
 
-<header class="site-header">
-  <div class="inner">
-    <a class="wordmark" href="index.html">Nigel Encalada</a>
-    <nav class="primary" aria-label="Main navigation">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="blog.html">Blog</a>
-      <a href="career.html">Career</a>
-      <a href="unesco.html">UNESCO</a>
-      <a href="belize.html">Belize</a>
-      <a href="recognition.html">Recognition</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+A simple, elegant static site. Six pages, one stylesheet, no build tools.
+Hosting is free on GitHub Pages; the only optional cost is a custom domain (~$10–15/year).
 
-<main>
+## Pages
 
-  <!-- ================= HERO ================= -->
-  <section class="hero">
-    <svg class="contours" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2">
-      <path d="M-50,520 C150,470 240,540 420,500 C600,460 690,530 900,480 C1060,442 1150,500 1260,470"/>
-      <path d="M-50,460 C160,400 260,480 440,430 C620,380 720,470 920,410 C1080,362 1160,430 1260,400"/>
-      <path d="M-50,395 C170,330 290,420 460,360 C640,300 750,400 940,340 C1100,290 1180,360 1260,330"/>
-      <path d="M-50,330 C180,260 320,360 480,290 C660,220 780,330 960,270 C1110,220 1190,290 1260,260"/>
-      <path d="M-50,265 C190,195 340,300 500,225 C670,150 800,265 980,205 C1120,158 1200,225 1260,195"/>
-      <path d="M-50,200 C200,135 360,240 520,165 C685,90 820,205 1000,145 C1130,100 1210,160 1260,135"/>
-      <circle cx="845" cy="255" r="3.5" fill="currentColor" stroke="none"/>
-      <path d="M845,255 L845,225 M845,255 L875,255" stroke-width="1"/>
-    </svg>
+| File | What it is |
+|---|---|
+| `index.html` | Homepage: positioning, featured work, blog teaser |
+| `career.html` | Career narrative + timeline |
+| `unesco.html` | UNESCO & international work (+ photo gallery) |
+| `belize.html` | National leadership in Belize |
+| `blog.html` | Development, Heritage & Tourism blog — **update every ~2 months** |
+| `recognition.html` | Publications, talks, media, affiliations |
+| `style.css` | All design — you shouldn't need to touch it |
 
-    <div class="inner hero-grid">
-      <div class="hero-text">
-        <p class="role">Cultural Heritage Expert · Applied Anthropologist · Policy Specialist</p>
-        <h1>Living heritage as a foundation for development.</h1>
-        <p class="lede">
-          Nigel Encalada has spent more than two decades helping nations and communities
-          safeguard the cultures they have inherited — and turn them into engines of
-          education, identity, and sustainable growth. Former Director of Belize's
-          Institute for Social and Cultural Research, UNESCO Global Facilitator, and
-          Chairperson of the Evaluation Body of the UNESCO 2003 Convention for the
-          Safeguarding of Intangible Cultural Heritage (2023).
-        </p>
-        <p class="fieldmark">
-          <span>Belize · United States</span>
-          <span>20+ years in cultural heritage</span>
-          <span>Fieldwork &amp; missions in 15+ countries</span>
-        </p>
-      </div>
+## One-time setup (~30 minutes)
 
-      <!-- ==================================================================
-           YOUR PORTRAIT:
-           1. Put your photo in the "images" folder (create it if needed).
-           2. Change src below to your filename, e.g. images/nigel.jpg
-           3. Delete the class="portrait-placeholder" so the frame styling
-              switches to a real photo (or just leave it — it works either way).
-           A vertical/portrait photo ~800x1000px, saved as .jpg, looks best.
-           ================================================================== -->
-      <figure class="hero-portrait">
-        <img src="images/portrait.jpg" alt="Portrait of Nigel Encalada"
-             class="portrait-placeholder"
-             onerror="this.classList.add('missing')">
-      </figure>
-    </div>
-  </section>
+1. **Create a free GitHub account** at github.com.
+2. **Create a new repository.** Click **+** (top right) → *New repository*.
+   Name it exactly `nigelencalada.github.io`. Set it **Public**. *Create repository*.
+3. **Upload the files.** On the repo page, click *uploading an existing file*, drag in
+   everything from this folder (all .html files, style.css, and — later — your images
+   folder). Click *Commit changes*.
+4. Wait 1–2 minutes, then visit `https://nigelencalada.github.io` — your site is live.
 
-  <!-- ================= ABOUT TEASER ================= -->
-  <section class="band">
-    <div class="inner two-col">
-      <div>
-        <p class="eyebrow">About</p>
-        <h2>From the classroom to the Convention floor</h2>
-      </div>
-      <div class="prose">
-        <p>Nigel's career began in the classrooms of St. John's College in Belize City,
-        teaching history and economics to a generation of Belizean students. It grew
-        into national leadership — twelve years as Director of the Institute for Social
-        and Cultural Research at Belize's National Institute of Culture and History —
-        and then onto the international stage, advising governments across the
-        Caribbean and Latin America and chairing the twelve-member body that evaluates
-        nominations to UNESCO's lists of the world's living heritage.</p>
-        <p>Today he is a Ph.D. candidate in Applied Anthropology at the University of
-        South Florida, researching the nexus of <strong>development, heritage and
-        tourism</strong> in Small Island Developing States — from cruise-port economies
-        and cultural labor to heritage safeguarding in the face of disaster.</p>
-        <p><a class="btn ghost" href="career.html">Read the full career story</a></p>
-      </div>
-    </div>
-  </section>
+### Using nigelencalada.com
 
-  <!-- ================= FEATURED WORK ================= -->
-  <section class="band alt">
-    <div class="inner">
-      <p class="eyebrow">Selected work</p>
-      <h2>Recent highlights</h2>
+If you own (or buy) nigelencalada.com:
+1. In the repo: **Settings → Pages → Custom domain** → enter `nigelencalada.com` → Save.
+2. At your domain registrar, add the DNS records GitHub shows you (four A records for
+   the apex, plus a CNAME for www). GitHub guide: docs.github.com/pages → "Managing a
+   custom domain".
+3. Tick **Enforce HTTPS** once available (can take up to a day).
 
-      <div class="projects">
-        <article class="project">
-          <p class="where">Gales Point, Belize · Inscribed Dec 2025</p>
-          <h3>Christmas Bram &amp; Sambai of Gales Point</h3>
-          <p>Community Coordinator and Technical Expert (with S. Solis, ISCR and the
-          National Kriol Council) for the nomination of this Kriol musical tradition —
-          now inscribed on the UNESCO Representative List of the Intangible Cultural
-          Heritage of Humanity.</p>
-          <p class="impact">One of Belize's living traditions recognized on the world's
-          foremost register of intangible heritage.</p>
-        </article>
+## Your every-two-months routine — the blog (~15 min)
 
-        <article class="project">
-          <p class="where">Barbados · Inscribed Dec 2025</p>
-          <h3>The Landship of Barbados</h3>
-          <p>Technical expert to the Barbados Ministry of Culture, Office of the Prime
-          Minister, for the successful nomination of the Landship tradition to the
-          UNESCO Representative List of the Intangible Cultural Heritage of Humanity.</p>
-          <p class="impact">International recognition secured for a uniquely Barbadian
-          institution of community, performance, and mutual aid.</p>
-        </article>
+1. Open your repo on github.com → click `blog.html` → click the **pencil icon**.
+2. Find the comment block `HOW TO ADD A NEW BLOG POST`.
+3. Copy the `<article class="post"> ... </article>` block, paste the copy directly
+   below that comment (newest on top), and change the date, title, and paragraphs.
+4. **Commit changes.** The live site refreshes within a minute or two.
 
-        <article class="project">
-          <p class="where">St. Kitts &amp; Nevis · 2023–2024</p>
-          <h3>Policy &amp; nomination for living heritage</h3>
-          <p>Consultant on the national Policy and Legislative Framework for Living
-          Cultural Heritage, and Technical Expert preparing the nomination of the
-          Masquerade traditions of St. Kitts and Nevis for possible inscription in
-          December 2027.</p>
-          <p class="impact">A national legal framework and a pathway to global
-          recognition for the federation's living culture.</p>
-        </article>
+## Adding photos
 
-        <article class="project">
-          <p class="where">Belize · 2022–2023</p>
-          <h3>Hurricane Lisa post-disaster assessment</h3>
-          <p>UNESCO Consultant for the culture sector of the Post-Disaster Needs
-          Assessment following Hurricane Lisa — part of a wider research and practice
-          focus on heritage, disaster risk, and resilience in Small Island Developing
-          States.</p>
-          <p class="impact">Culture counted in national recovery planning.</p>
-        </article>
-      </div>
+1. Create a folder named `images` and upload it to the repo.
+2. On `unesco.html` (or any page), find the `TO ADD PHOTOS` comment and follow it —
+   copy a `<figure>` block, point `src` at your filename, write a caption.
+3. Use landscape photos ~1200px wide, saved as .jpg, for fast loading.
 
-      <p style="margin-top:2rem">
-        <a class="btn" href="unesco.html">UNESCO &amp; international work</a>
-        &nbsp;&nbsp;
-        <a class="btn ghost" href="belize.html">Foundations in Belize</a>
-      </p>
-    </div>
-  </section>
+## Tip
 
-  <!-- ================= BLOG TEASER ================= -->
-  <section class="band">
-    <div class="inner">
-      <p class="eyebrow">The blog</p>
-      <h2>Development, Heritage &amp; Tourism</h2>
-      <p class="prose">Field notes and commentary on the questions that animate the
-      work: how tourism economies capture — or leak — value; how living heritage
-      survives disasters and demographic change; and how culture earns its place in
-      development policy.</p>
-      <p style="margin-top:1.6rem"><a class="btn ghost" href="blog.html">Read the latest posts</a></p>
-    </div>
-  </section>
-
-</main>
-
-<!-- ================= FOOTER / CONTACT ================= -->
-<footer class="site-footer" id="contact">
-  <div class="inner">
-    <div>
-      <p class="contact-name">Nigel Encalada</p>
-      <p>Nigel Encalada is currently a Ph.D. student studying Development, Heritage
-      and Tourism in Small Island Developing States in the Department of Anthropology
-      at the University of South Florida.</p>
-    </div>
-    <div class="links">
-      <a href="mailto:nencalada@usf.edu">nencalada@usf.edu</a>
-      <a href="https://www.linkedin.com/in/nigel-encalada-08b03880/" rel="me">LinkedIn</a>
-    </div>
-    <p class="fineprint">© 2026 Nigel Encalada · All rights reserved</p>
-  </div>
-</footer>
-
-</body>
-</html>
+You can always paste any of these files back into a chat with Claude, describe the
+change you want (a new blog post, a new project, updated photos), and get the finished
+file back to paste straight into GitHub's editor.
