@@ -1,175 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Recognition — Nigel Encalada</title>
-<meta name="description" content="Publications, conference presentations, invited international addresses, media, and professional affiliations of Nigel Encalada.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Marcellus&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{ --accent:#8a3d6b; --accent-deep:#682c50; }</style>
-</head>
-<body>
+# Nigel Encalada — Professional Website
 
-<header class="site-header">
-  <div class="inner">
-    <a class="wordmark" href="index.html">Nigel Encalada</a>
-    <nav class="primary" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="blog.html">Blog</a>
-      <a href="career.html">Career</a>
-      <a href="unesco.html">UNESCO</a>
-      <a href="belize.html">Belize</a>
-      <a href="recognition.html" aria-current="page">Recognition</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+A simple, elegant static site. Six pages, one stylesheet, no build tools.
+Hosting is free on GitHub Pages; the only optional cost is a custom domain (~$10–15/year).
 
-<main>
-  <section class="band alt">
-    <div class="inner">
-      <p class="eyebrow">Recognition</p>
-      <h2>Publications, talks &amp; affiliations</h2>
-      <p class="prose">Selected writing, speaking, and professional recognition across
-      more than two decades of practice in cultural heritage and anthropology.</p>
-    </div>
-  </section>
+## Pages
 
-  <section class="band">
-    <div class="inner">
+| File | What it is |
+|---|---|
+| `index.html` | Homepage: positioning, featured work, blog teaser |
+| `career.html` | Career narrative + timeline |
+| `unesco.html` | UNESCO & international work (+ photo gallery) |
+| `belize.html` | National leadership in Belize |
+| `blog.html` | Development, Heritage & Tourism blog — **update every ~2 months** |
+| `recognition.html` | Publications, talks, media, affiliations |
+| `style.css` | All design — you shouldn't need to touch it |
 
-      <div class="rec-group">
-        <h3>Selected publications &amp; policy documents</h3>
-        <ul class="rec-list">
-          <li>
-            <span class="what">Snapshot Belize</span>
-            <span class="meta">Copal Tree Lodge · 2024</span>
-          </li>
-          <li>
-            <span class="what">Periodic Report on Implementing the 2003 UNESCO Convention for the Safeguarding of Intangible Cultural Heritage in Belize (with P. Pelayo)</span>
-            <span class="meta">National Institute of Culture and History · 2021</span>
-          </li>
-          <li>
-            <span class="what">The documentary heritage of slavery and emancipation in Belize</span>
-            <span class="meta">ArcGIS StoryMaps · 2020</span>
-          </li>
-          <li>
-            <span class="what">Belize National Cultural Policy 2016–2026 (with J. Morris)</span>
-            <span class="meta">National Institute of Culture and History · 2016</span>
-          </li>
-          <li>
-            <span class="what">A Walk Through El Cayo: San Ignacio and Santa Elena (ed., with R. Cocom &amp; G. Pinelo)</span>
-            <span class="meta">National Institute of Culture and History · 2015</span>
-          </li>
-          <li>
-            <span class="what">A Walk Through Dangriga (ed., with R. Cocom &amp; G. Pinelo)</span>
-            <span class="meta">National Institute of Culture and History · 2015</span>
-          </li>
-          <li>
-            <span class="what">Research Reports in Belizean History and Anthropology, Vols. 1–4 (founding editor)</span>
-            <span class="meta">National Institute of Culture and History · 2013–2015</span>
-          </li>
-          <li>
-            <span class="what">St. George's Caye: The Birthplace of a Nation (ed., with J. Awe)</span>
-            <span class="meta">National Institute of Culture and History · 2010</span>
-          </li>
-          <li>
-            <span class="what">Belizean Studies: A Journal of Social Research and Thought (co-editor, multiple volumes)</span>
-            <span class="meta">2007–2010</span>
-          </li>
-        </ul>
-      </div>
+## One-time setup (~30 minutes)
 
-      <div class="rec-group">
-        <h3>Conference presentations</h3>
-        <ul class="rec-list">
-          <li>
-            <span class="what">Returning Haynes to the Motherland: Rediscovering Samuel Haynes, a Belizean American Transnational Black Leader and Activist</span>
-            <span class="meta">Society for Applied Anthropology · Albuquerque · March 2026</span>
-          </li>
-          <li>
-            <span class="what">Group Positionality in a Multi-Cultural Society: The Case of the Garifuna of Belize</span>
-            <span class="meta">American Anthropological Association · New Orleans · November 2025</span>
-          </li>
-          <li>
-            <span class="what">At the Nexus of Demographic Shifts, Cultural Diversity and Group Positionality: The Case of the Belize Kriol</span>
-            <span class="meta">American Anthropological Association · Tampa · November 2024</span>
-          </li>
-        </ul>
-      </div>
+1. **Create a free GitHub account** at github.com.
+2. **Create a new repository.** Click **+** (top right) → *New repository*.
+   Name it exactly `nigelencalada.github.io`. Set it **Public**. *Create repository*.
+3. **Upload the files.** On the repo page, click *uploading an existing file*, drag in
+   everything from this folder (all .html files, style.css, and — later — your images
+   folder). Click *Commit changes*.
+4. Wait 1–2 minutes, then visit `https://nigelencalada.github.io` — your site is live.
 
-      <div class="rec-group">
-        <h3>Invited talks &amp; international addresses</h3>
-        <ul class="rec-list">
-          <li>
-            <span class="what">Panelist &amp; Rapporteur — Conference on the Link between the World Heritage and Living Heritage Conventions</span>
-            <span class="meta">UNESCO · Naples, Italy · November 2023</span>
-          </li>
-          <li>
-            <span class="what">Integrating intangible cultural heritage in formal and non-formal education (invited lecture)</span>
-            <span class="meta">UNESCO Massive Open Online Course (MOOC) · 2021</span>
-          </li>
-          <li>
-            <span class="what">Address on the role of culture in sustainable development</span>
-            <span class="meta">2nd UNWTO/UNESCO World Conference on Tourism and Culture · Muscat, Oman · December 2017</span>
-          </li>
-        </ul>
-      </div>
+### Using nigelencalada.com
 
-      <div class="rec-group">
-        <h3>Media &amp; public scholarship</h3>
-        <ul class="rec-list">
-          <li>
-            <span class="what">Featured expert, national feature on the history of slavery and emancipation in Belize</span>
-            <span class="meta">7News Belize · July 2025</span>
-          </li>
-          <li>
-            <span class="what">Culture in the time of Covid: A view from the Caribbean</span>
-            <span class="meta">Breaking Belize News · reposted on the Belize Living Heritage portal · 2020</span>
-          </li>
-        </ul>
-      </div>
+If you own (or buy) nigelencalada.com:
+1. In the repo: **Settings → Pages → Custom domain** → enter `nigelencalada.com` → Save.
+2. At your domain registrar, add the DNS records GitHub shows you (four A records for
+   the apex, plus a CNAME for www). GitHub guide: docs.github.com/pages → "Managing a
+   custom domain".
+3. Tick **Enforce HTTPS** once available (can take up to a day).
 
-      <div class="rec-group">
-        <h3>Professional affiliations</h3>
-        <ul class="rec-list">
-          <li>
-            <span class="what">Member, American Anthropological Association (AAA)</span>
-            <span class="meta">2024 – present</span>
-          </li>
-          <li>
-            <span class="what">Member, Programming Committee, Association of Black Anthropologists (ABA)</span>
-            <span class="meta">2025 – present</span>
-          </li>
-          <li>
-            <span class="what">Alpha Sigma Nu Honor Society (top 4%)</span>
-            <span class="meta">Rockhurst University</span>
-          </li>
-        </ul>
-      </div>
+## Your every-two-months routine — the blog (~15 min)
 
-    </div>
-  </section>
-</main>
+1. Open your repo on github.com → click `blog.html` → click the **pencil icon**.
+2. Find the comment block `HOW TO ADD A NEW BLOG POST`.
+3. Copy the `<article class="post"> ... </article>` block, paste the copy directly
+   below that comment (newest on top), and change the date, title, and paragraphs.
+4. **Commit changes.** The live site refreshes within a minute or two.
 
-<footer class="site-footer" id="contact">
-  <div class="inner">
-    <div>
-      <p class="contact-name">Nigel Encalada</p>
-      <p>Nigel Encalada is currently a Ph.D. student studying Development, Heritage
-      and Tourism in Small Island Developing States in the Department of Anthropology
-      at the University of South Florida.</p>
-    </div>
-    <div class="links">
-      <a href="mailto:nencalada@usf.edu">nencalada@usf.edu</a>
-      <a href="https://www.linkedin.com/in/nigel-encalada-08b03880/" rel="me">LinkedIn</a>
-    </div>
-    <p class="fineprint">© 2026 Nigel Encalada · All rights reserved</p>
-  </div>
-</footer>
+## Adding photos
 
-</body>
-</html>
+1. Create a folder named `images` and upload it to the repo.
+2. On `unesco.html` (or any page), find the `TO ADD PHOTOS` comment and follow it —
+   copy a `<figure>` block, point `src` at your filename, write a caption.
+3. Use landscape photos ~1200px wide, saved as .jpg, for fast loading.
+
+## Tip
+
+You can always paste any of these files back into a chat with Claude, describe the
+change you want (a new blog post, a new project, updated photos), and get the finished
+file back to paste straight into GitHub's editor.
