@@ -9,7 +9,36 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Marcellus&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>:root{ --accent:#1f8f7a; --accent-deep:#146254; }</style>
+<style>:root{ --accent:#1f8f7a; --accent-deep:#146254; }
+.hero-grid{ display:grid; gap:clamp(2rem,5vw,4rem); align-items:center; }
+@media (min-width:860px){
+  .hero-grid{ grid-template-columns: 1.5fr 1fr; }
+}
+.hero-portrait{ margin:0; position:relative; }
+.hero-portrait img{
+  width:100%; aspect-ratio:4/5; object-fit:cover;
+  border:1px solid var(--line);
+  border-bottom:4px solid var(--accent);
+  background:var(--stone-deep);
+  box-shadow:0 12px 30px -12px rgba(35,48,46,0.35);
+}
+/* graceful placeholder if the photo file isn't there yet */
+.hero-portrait img.missing{
+  min-height:340px;
+  display:flex;
+  position:relative;
+}
+.hero-portrait img.missing::after{
+  content:"Your photo here";
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-label); font-size:0.72rem; letter-spacing:0.18em;
+  text-transform:uppercase; color:var(--ink-soft);
+  background:var(--stone-deep);
+}
+@media (max-width:859px){
+  .hero-portrait{ max-width:320px; }
+}</style>
 </head>
 <body>
 
@@ -43,22 +72,38 @@
       <path d="M845,255 L845,225 M845,255 L875,255" stroke-width="1"/>
     </svg>
 
-    <div class="inner">
-      <p class="role">Cultural Heritage Expert · Applied Anthropologist · Policy Specialist</p>
-      <h1>Living heritage as a foundation for development.</h1>
-      <p class="lede">
-        Nigel Encalada has spent more than two decades helping nations and communities
-        safeguard the cultures they have inherited — and turn them into engines of
-        education, identity, and sustainable growth. Former Director of Belize's
-        Institute for Social and Cultural Research, UNESCO Global Facilitator, and
-        Chairperson of the Evaluation Body of the UNESCO 2003 Convention for the
-        Safeguarding of Intangible Cultural Heritage (2023).
-      </p>
-      <p class="fieldmark">
-        <span>Belize · United States</span>
-        <span>20+ years in cultural heritage</span>
-        <span>Fieldwork &amp; missions in 15+ countries</span>
-      </p>
+    <div class="inner hero-grid">
+      <div class="hero-text">
+        <p class="role">Cultural Heritage Expert · Applied Anthropologist · Policy Specialist</p>
+        <h1>Living heritage as a foundation for development.</h1>
+        <p class="lede">
+          Nigel Encalada has spent more than two decades helping nations and communities
+          safeguard the cultures they have inherited — and turn them into engines of
+          education, identity, and sustainable growth. Former Director of Belize's
+          Institute for Social and Cultural Research, UNESCO Global Facilitator, and
+          Chairperson of the Evaluation Body of the UNESCO 2003 Convention for the
+          Safeguarding of Intangible Cultural Heritage (2023).
+        </p>
+        <p class="fieldmark">
+          <span>Belize · United States</span>
+          <span>20+ years in cultural heritage</span>
+          <span>Fieldwork &amp; missions in 15+ countries</span>
+        </p>
+      </div>
+
+      <!-- ==================================================================
+           YOUR PORTRAIT:
+           1. Put your photo in the "images" folder (create it if needed).
+           2. Change src below to your filename, e.g. images/nigel.jpg
+           3. Delete the class="portrait-placeholder" so the frame styling
+              switches to a real photo (or just leave it — it works either way).
+           A vertical/portrait photo ~800x1000px, saved as .jpg, looks best.
+           ================================================================== -->
+      <figure class="hero-portrait">
+        <img src="images/portrait.jpg" alt="Portrait of Nigel Encalada"
+             class="portrait-placeholder"
+             onerror="this.classList.add('missing')">
+      </figure>
     </div>
   </section>
 
