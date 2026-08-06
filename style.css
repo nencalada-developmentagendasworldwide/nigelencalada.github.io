@@ -389,3 +389,54 @@ footer .fineprint {
 .post h3 { font-size: 1.55rem; margin-bottom: 0.9rem; }
 .post p + p { margin-top: 1rem; }
 .post p { color: var(--ink-soft); }
+
+/* ---------- podcast episodes ---------- */
+.episode {
+  max-width: var(--measure);
+  padding: 1.8rem 0;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 1.4rem;
+}
+.episode:first-of-type { border-top: none; }
+.episode .ep-num {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--accent);
+  line-height: 1;
+  padding-top: 0.2rem;
+}
+.episode .ep-meta {
+  font-family: var(--font-label);
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--accent-deep);
+  margin-bottom: 0.5rem;
+}
+.episode h3 { font-size: 1.3rem; margin-bottom: 0.6rem; }
+.episode p { color: var(--ink-soft); font-size: 1.02rem; }
+.episode .ep-listen {
+  margin-top: 0.9rem;
+  display: flex; gap: 1rem; flex-wrap: wrap;
+}
+.episode .ep-listen a {
+  font-family: var(--font-label);
+  font-size: 0.74rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+.coming-soon {
+  margin-top: 2rem;
+  padding: 2.5rem 2rem;
+  background: var(--page-bg-alt);
+  border: 1px dashed var(--accent);
+  text-align: center;
+}
+.coming-soon .cs-label {
+  font-family: var(--font-label);
+  font-size: 0.74rem; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--accent-deep);
+  margin-bottom: 0.6rem;
+}
+.coming-soon p { color: var(--ink-soft); max-width: 46ch; margin: 0 auto; }
