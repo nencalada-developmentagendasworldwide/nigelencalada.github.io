@@ -1,207 +1,442 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UNESCO &amp; International Work &mdash; Nigel Encalada</title>
-<meta name="description" content="Nigel Encalada's work with UNESCO: Chairperson of the 2003 Convention Evaluation Body, Global Facilitator, and technical expert on intangible cultural heritage across the Caribbean and beyond.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Marcellus&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{ --accent:#2563c4; --accent-deep:#1a4794; --page-bg:#eef1f6; --page-bg-alt:#f7f9fc; }</style>
-</head>
-<body>
+/* ============================================================
+   PERSONAL SITE — SHARED STYLES
+   Palette: limestone / deep pine ink / verdigris / bronze
+   Type: Marcellus (display) · Newsreader (body) · Archivo (labels)
+   You should not need to edit this file for routine updates.
+   ============================================================ */
 
-<header class="site-header">
-  <div class="inner">
-    <a class="wordmark" href="index.html">Nigel Encalada</a>
-    <nav class="primary" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="blog.html">Blog</a>
-      <a href="podcast.html">Podcast</a>
-      <a href="career.html">Career</a>
-      <a href="unesco.html" aria-current="page">UNESCO</a>
-      <a href="belize.html">Belize</a>
-      <a href="recognition.html">Recognition</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+:root {
+  --stone: #f3f0e9;
+  --stone-deep: #e8e3d6;
+  --ink: #23302e;
+  --ink-soft: #4a5755;
+  --line: #d9d3c4;
+  --white: #fdfcf8;
 
-<main>
-  <section class="band alt">
-    <div class="inner">
-      <p class="eyebrow">UNESCO &amp; international work</p>
-      <h2>Safeguarding the living heritage of humanity</h2>
-      <div class="prose">
-        <p>Nigel Encalada's international practice centers on the <strong>UNESCO 2003
-        Convention for the Safeguarding of the Intangible Cultural Heritage</strong> &mdash;
-        the global treaty through which nations protect the traditions, performances,
-        knowledge, and craft that define who they are. As a member of UNESCO's network
-        of Global Facilitators, he trains government officials and communities, advises
-        on national policy, evaluates international nominations, and helps living
-        traditions win recognition on the world stage.</p>
-        <p>In 2023 he chaired the twelve-member Evaluation Body of the Convention &mdash; the
-        expert panel that assesses every nomination submitted by states from around the
-        world &mdash; a role that placed him at the apex of international decision-making on
-        intangible heritage.</p>
-      </div>
-    </div>
-  </section>
+  /* Per-page background wash — each page may override these two.
+     Defaults are the neutral stone/white used on the home page. */
+  --page-bg: #f3f0e9;
+  --page-bg-alt: #fdfcf8;
 
-  <section class="band">
-    <div class="inner">
-      <p class="eyebrow">Roles</p>
-      <h2>Leadership &amp; expert appointments</h2>
+  /* ---- PER-PAGE ACCENT ----
+     Each page sets --accent and --accent-deep in its own <style> block.
+     Everything colorful (headings' eyebrows, links, card borders, buttons)
+     points to these two variables. The defaults below are the "home" teal;
+     inner pages override them. --secondary stays constant as a warm counterpoint. */
+  --accent: #1f8f7a;         /* vibrant verdigris — home default */
+  --accent-deep: #146254;
+  --secondary: #c07d2a;      /* warm bronze, shared across pages */
 
-      <div class="projects">
-        <article class="project">
-          <p class="where">Botswana &middot; 2023 (member 2021&ndash;2024)</p>
-          <h3>Chairperson, Evaluation Body of the 2003 Convention</h3>
-          <p>Chaired the twelve-member expert body responsible for evaluating global
-          nominations to the Convention's lists of intangible cultural heritage.</p>
-          <p class="impact">Led international consensus on which of the world's living
-          traditions merit UNESCO recognition.</p>
-        </article>
+  /* Convenience aliases so older rules keep working */
+  --verdigris: var(--accent);
+  --verdigris-deep: var(--accent-deep);
+  --bronze: var(--secondary);
 
-        <article class="project">
-          <p class="where">Caribbean, Europe, Asia, Latin America &middot; 2014&ndash;2024</p>
-          <h3>UNESCO Global Facilitator</h3>
-          <p>Delivered fieldwork and capacity-building workshops on the 2003 Convention
-          in Belize, Barbados, Beijing, Bonaire, Cura&ccedil;ao, Jamaica, Paris, Sint Maarten,
-          Suriname, St. Kitts &amp; Nevis, Grenada, the Netherlands, and Peru, as well as
-          online workshops for representatives of the Latin America and Caribbean bloc.</p>
-          <p class="impact">Government officials and communities across four continents
-          trained to safeguard their own living heritage.</p>
-        </article>
+  --font-display: "Marcellus", serif;
+  --font-body: "Newsreader", Georgia, serif;
+  --font-label: "Archivo", system-ui, sans-serif;
 
-        <article class="project">
-          <p class="where">Belize &middot; 2012&ndash;2021</p>
-          <h3>National Focal Point &amp; Head of Delegation</h3>
-          <p>Served as Belize's National Focal Point for the Convention and Head of
-          Delegation to the 9th&ndash;14th Intergovernmental Meetings, held in Colombia,
-          Mauritius, South Korea, Ethiopia, Namibia, and France.</p>
-          <p class="impact">Represented Belize in the governance of a global heritage
-          treaty over nearly a decade.</p>
-        </article>
+  --measure: 66ch;
+  --pad: clamp(1.25rem, 4vw, 3rem);
+}
 
-        <article class="project">
-          <p class="where">St. Kitts &amp; Nevis &middot; 2023&ndash;2024</p>
-          <h3>Consultant, living-heritage policy &amp; law</h3>
-          <p>Advised on the national Policy and Legislative Framework for Living
-          Cultural Heritage.</p>
-          <p class="impact">A sovereign legal foundation for protecting the federation's
-          intangible culture.</p>
-        </article>
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-        <article class="project">
-          <p class="where">Belize &middot; 2022&ndash;2023</p>
-          <h3>Culture-sector lead, Hurricane Lisa PDNA</h3>
-          <p>UNESCO Consultant for the culture sector of the Post-Disaster Needs
-          Assessment after Hurricane Lisa, and workshop facilitator on safeguarding
-          intangible heritage in emergencies in SIDS.</p>
-          <p class="impact">Culture embedded in national disaster recovery planning.</p>
-        </article>
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
 
-        <article class="project">
-          <p class="where">EU Overseas Countries &amp; Territories &middot; 2022</p>
-          <h3>Evaluator, Archipel.EU</h3>
-          <p>Assessed international funding applications for safeguarding cultural
-          heritage across EU Overseas Countries &amp; Territories and Outermost Regions.</p>
-          <p class="impact">Helped direct European heritage funding to where it matters
-          most.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+body {
+  background: var(--page-bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
 
-  <!-- ================= INSCRIPTIONS ================= -->
-  <section class="band alt">
-    <div class="inner">
-      <p class="eyebrow">Inscriptions</p>
-      <h2>Traditions recognized by the world</h2>
-      <p class="prose">Technical and community expertise behind successful &mdash; and
-      pending &mdash; nominations to the UNESCO Representative List of the Intangible
-      Cultural Heritage of Humanity.</p>
+a { color: var(--verdigris-deep); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--bronze); }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--verdigris);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
 
-      <div class="projects">
-        <article class="project">
-          <p class="where">Belize &middot; Inscribed December 2025</p>
-          <h3>Christmas Bram &amp; Sambai of Gales Point</h3>
-          <p>Community Coordinator and Technical Expert, with S. Solis (ISCR) and the
-          National Kriol Council.</p>
-          <p class="impact">Inscribed on the UNESCO Representative List.</p>
-        </article>
+img { max-width: 100%; display: block; }
 
-        <article class="project">
-          <p class="where">Barbados &middot; Inscribed December 2025</p>
-          <h3>The Landship</h3>
-          <p>Technical expert with the Barbados Ministry of Culture, Office of the
-          Prime Minister.</p>
-          <p class="impact">Inscribed on the UNESCO Representative List.</p>
-        </article>
+/* ---------- labels / eyebrows ---------- */
+.eyebrow {
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--verdigris-deep);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.1rem;
+}
+.eyebrow::after { content: ""; height: 1px; width: 3rem; background: var(--bronze); }
 
-        <article class="project">
-          <p class="where">St. Kitts &amp; Nevis &middot; Decision expected Dec 2027</p>
-          <h3>Masquerade Traditions</h3>
-          <p>Technical Expert preparing the nomination with the Department of Cultural
-          Heritage.</p>
-          <p class="impact">Awaiting evaluation for possible inscription.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+/* ---------- header / nav ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--page-bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.site-header .inner {
+  max-width: 1100px; margin: 0 auto; padding: 0.85rem var(--pad);
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+}
+.wordmark {
+  font-family: var(--font-display);
+  font-size: 1.15rem; letter-spacing: 0.04em;
+  color: var(--ink); text-decoration: none;
+}
+.wordmark:hover { color: var(--verdigris-deep); }
+nav.primary { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+nav.primary a {
+  font-family: var(--font-label);
+  font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-soft); text-decoration: none;
+  padding: 0.3rem 0;
+  border-bottom: 2px solid transparent;
+}
+nav.primary a:hover { color: var(--verdigris-deep); }
+nav.primary a[aria-current="page"] {
+  color: var(--accent-deep);
+  border-bottom-color: var(--accent);
+  border-bottom-width: 3px;
+}
 
-  <!-- ================= PHOTO GALLERY ================= -->
-  <section class="band">
-    <div class="inner">
-      <p class="eyebrow">In the field</p>
-      <h2>A global practice</h2>
-      <p class="prose">Missions, meetings, and fieldwork across the Caribbean, Europe,
-      Asia, and Latin America.</p>
+/* ---------- hero ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background: var(--page-bg-alt);
+}
+.hero .contours {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  color: var(--accent);
+  opacity: 0.20;
+  pointer-events: none;
+}
+.hero .inner {
+  position: relative;
+  max-width: 1100px; margin: 0 auto;
+  padding: clamp(4rem, 10vw, 7.5rem) var(--pad) clamp(3rem, 8vw, 6rem);
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+  max-width: 18ch;
+}
+.hero .role {
+  font-family: var(--font-label);
+  font-size: 0.8rem; font-weight: 600;
+  letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--verdigris-deep);
+  margin-bottom: 1.4rem;
+}
+.hero .lede {
+  margin-top: 1.6rem;
+  max-width: 52ch;
+  font-size: clamp(1.15rem, 2vw, 1.3rem);
+  color: var(--ink-soft);
+}
+.hero .fieldmark {
+  margin-top: 2.4rem;
+  font-family: var(--font-label);
+  font-size: 0.72rem; letter-spacing: 0.18em;
+  color: var(--bronze);
+  text-transform: uppercase;
+  display: flex; gap: 1.25rem; flex-wrap: wrap;
+}
+.hero .fieldmark span::before { content: "· "; color: var(--verdigris); }
+.hero .fieldmark span:first-child::before { content: ""; }
 
-      <!-- ==================================================================
-           TO ADD PHOTOS:
-           1. Put your image files in an "images" folder alongside these pages.
-           2. Copy a <figure> block below, one per photo.
-           3. Change the src to your filename and write a short caption.
-           Recommended: landscape photos, roughly 1200px wide, saved as .jpg.
-           Delete this whole section if you're not ready for photos yet.
-           ================================================================== -->
-      <div class="gallery">
-        <figure>
-          <img src="images/placeholder-1.jpg" alt="Description of the photo for accessibility">
-          <figcaption>Caption &mdash; e.g. 2003 Convention meeting, Botswana, 2023</figcaption>
-        </figure>
-        <figure>
-          <img src="images/placeholder-2.jpg" alt="Description of the photo for accessibility">
-          <figcaption>Caption &mdash; e.g. Field workshop, Suriname</figcaption>
-        </figure>
-        <figure>
-          <img src="images/placeholder-3.jpg" alt="Description of the photo for accessibility">
-          <figcaption>Caption &mdash; e.g. UNWTO/UNESCO Conference, Oman, 2017</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-</main>
+/* ---------- generic sections ---------- */
+main { display: block; }
+section.band { border-bottom: 1px solid var(--line); }
+section.band.alt { background: var(--page-bg-alt); }
+.band .inner {
+  max-width: 1100px; margin: 0 auto;
+  padding: clamp(3rem, 7vw, 5rem) var(--pad);
+}
+h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.7rem, 3.4vw, 2.3rem);
+  line-height: 1.15;
+  margin-bottom: 1.4rem;
+}
+h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.3;
+}
+.prose { max-width: var(--measure); }
+.prose p + p { margin-top: 1rem; }
+.prose strong { color: var(--verdigris-deep); font-weight: 600; }
 
-<footer class="site-footer" id="contact">
-  <div class="inner">
-    <div>
-      <p class="contact-name">Nigel Encalada</p>
-      <p>Nigel Encalada is currently a Ph.D. student studying Development, Heritage
-      and Tourism in Small Island Developing States in the Department of Anthropology
-      at the University of South Florida.</p>
-    </div>
-    <div class="links">
-      <a href="mailto:nencalada@usf.edu">nencalada@usf.edu</a>
-      <a href="https://www.linkedin.com/in/nigel-encalada-08b03880/" rel="me">LinkedIn</a>
-    </div>
-    <p class="fineprint">&copy; 2026 Nigel Encalada &middot; All rights reserved</p>
-  </div>
-</footer>
+.two-col {
+  display: grid; gap: 2.5rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 820px) {
+  .two-col { grid-template-columns: 1fr 1.6fr; align-items: start; }
+}
 
-</body>
-</html>
+/* ---------- project cards ---------- */
+.projects {
+  display: grid; gap: 1.5rem;
+  grid-template-columns: 1fr;
+  margin-top: 2rem;
+}
+@media (min-width: 760px) { .projects { grid-template-columns: 1fr 1fr; } }
+.project {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--verdigris);
+  padding: 1.6rem 1.5rem 1.5rem;
+  display: flex; flex-direction: column; gap: 0.8rem;
+}
+section.band.alt .project { background: var(--stone); }
+.project .where {
+  font-family: var(--font-label);
+  font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--bronze);
+}
+.project p { font-size: 1.02rem; color: var(--ink-soft); }
+.project .impact {
+  margin-top: auto; padding-top: 0.9rem;
+  border-top: 1px dashed var(--line);
+  font-size: 0.95rem;
+  color: var(--verdigris-deep);
+}
+.project .impact::before {
+  content: "Impact";
+  display: block;
+  font-family: var(--font-label);
+  font-size: 0.66rem; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 0.25rem;
+}
+
+/* ---------- timeline (career page) ---------- */
+.timeline { margin-top: 2.5rem; display: grid; gap: 0; }
+.tl-item {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 1.5rem;
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--line);
+}
+.tl-item:last-child { border-bottom: 1px solid var(--line); }
+.tl-when {
+  font-family: var(--font-label);
+  font-size: 0.78rem; font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--verdigris-deep);
+  padding-top: 0.35rem;
+}
+.tl-body h3 { margin-bottom: 0.2rem; }
+.tl-body .org {
+  font-family: var(--font-label);
+  font-size: 0.78rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--bronze);
+  margin-bottom: 0.6rem;
+}
+.tl-body p { font-size: 1.02rem; color: var(--ink-soft); max-width: 60ch; }
+.tl-body ul { margin: 0.6rem 0 0 1.1rem; color: var(--ink-soft); font-size: 1.0rem; }
+.tl-body li + li { margin-top: 0.3rem; }
+@media (max-width: 620px) {
+  .tl-item { grid-template-columns: 1fr; gap: 0.4rem; }
+}
+
+/* ---------- recognition lists ---------- */
+.rec-group { margin-top: 2.2rem; }
+.rec-group h3 { margin-bottom: 0.9rem; }
+.rec-list { list-style: none; }
+.rec-list li {
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--line);
+  display: grid; gap: 0.2rem;
+  max-width: 70ch;
+}
+.rec-list li:last-child { border-bottom: 1px solid var(--line); }
+.rec-list .what { font-size: 1.05rem; }
+.rec-list .meta {
+  font-family: var(--font-label);
+  font-size: 0.74rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--ink-soft);
+}
+
+/* ---------- updates ---------- */
+.updates { margin-top: 2rem; display: grid; gap: 0; max-width: 74ch; }
+.update {
+  display: grid; grid-template-columns: 7.5rem 1fr; gap: 1.5rem;
+  padding: 1.2rem 0; border-top: 1px solid var(--line);
+}
+.update:last-child { border-bottom: 1px solid var(--line); }
+.update time {
+  font-family: var(--font-label);
+  font-size: 0.76rem; font-weight: 600; letter-spacing: 0.12em;
+  color: var(--verdigris-deep); padding-top: 0.3rem;
+}
+.update p { font-size: 1.02rem; color: var(--ink-soft); }
+.update p strong { color: var(--ink); font-weight: 600; }
+@media (max-width: 620px) {
+  .update { grid-template-columns: 1fr; gap: 0.3rem; }
+}
+
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-block;
+  font-family: var(--font-label);
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--white); background: var(--verdigris-deep);
+  padding: 0.85rem 1.5rem;
+  text-decoration: none;
+  border: 1px solid var(--verdigris-deep);
+  transition: background 160ms ease;
+}
+.btn:hover { background: var(--ink); border-color: var(--ink); color: var(--white); }
+.btn.ghost {
+  background: transparent; color: var(--verdigris-deep);
+}
+.btn.ghost:hover { background: var(--verdigris-deep); color: var(--white); }
+
+/* ---------- footer ---------- */
+footer.site-footer {
+  background: var(--ink);
+  color: var(--stone);
+}
+footer.site-footer .inner {
+  max-width: 1100px; margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 4rem) var(--pad);
+  display: grid; gap: 2rem;
+}
+@media (min-width: 760px) {
+  footer.site-footer .inner { grid-template-columns: 1.4fr 1fr; align-items: start; }
+}
+footer .contact-name {
+  font-family: var(--font-display);
+  font-size: 1.5rem; margin-bottom: 0.6rem;
+}
+footer p, footer a { color: color-mix(in srgb, var(--stone) 82%, transparent); font-size: 1rem; }
+footer a { color: #9ec7ba; }
+footer a:hover { color: var(--white); }
+footer .links { display: grid; gap: 0.4rem; }
+footer .fineprint {
+  grid-column: 1 / -1;
+  border-top: 1px solid color-mix(in srgb, var(--stone) 20%, transparent);
+  padding-top: 1.2rem;
+  font-family: var(--font-label);
+  font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: color-mix(in srgb, var(--stone) 55%, transparent);
+}
+
+/* ---------- photo gallery ---------- */
+.gallery {
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  margin-top: 2rem;
+}
+.gallery figure {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 0.6rem;
+}
+.gallery img { width: 100%; height: 220px; object-fit: cover; }
+.gallery figcaption {
+  font-family: var(--font-label);
+  font-size: 0.72rem; letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  padding-top: 0.55rem;
+  text-transform: uppercase;
+}
+
+/* ---------- blog posts ---------- */
+.post {
+  max-width: var(--measure);
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--line);
+}
+.post:first-of-type { border-top: none; padding-top: 0.5rem; }
+.post .post-meta {
+  font-family: var(--font-label);
+  font-size: 0.74rem; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--verdigris-deep);
+  margin-bottom: 0.7rem;
+}
+.post h3 { font-size: 1.55rem; margin-bottom: 0.9rem; }
+.post p + p { margin-top: 1rem; }
+.post p { color: var(--ink-soft); }
+
+/* ---------- podcast episodes ---------- */
+.episode {
+  max-width: var(--measure);
+  padding: 1.8rem 0;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 1.4rem;
+}
+.episode:first-of-type { border-top: none; }
+.episode .ep-num {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--accent);
+  line-height: 1;
+  padding-top: 0.2rem;
+}
+.episode .ep-meta {
+  font-family: var(--font-label);
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--accent-deep);
+  margin-bottom: 0.5rem;
+}
+.episode h3 { font-size: 1.3rem; margin-bottom: 0.6rem; }
+.episode p { color: var(--ink-soft); font-size: 1.02rem; }
+.episode .ep-listen {
+  margin-top: 0.9rem;
+  display: flex; gap: 1rem; flex-wrap: wrap;
+}
+.episode .ep-listen a {
+  font-family: var(--font-label);
+  font-size: 0.74rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+.coming-soon {
+  margin-top: 2rem;
+  padding: 2.5rem 2rem;
+  background: var(--page-bg-alt);
+  border: 1px dashed var(--accent);
+  text-align: center;
+}
+.coming-soon .cs-label {
+  font-family: var(--font-label);
+  font-size: 0.74rem; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--accent-deep);
+  margin-bottom: 0.6rem;
+}
+.coming-soon p { color: var(--ink-soft); max-width: 46ch; margin: 0 auto; }
