@@ -1,129 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Development Talk &mdash; Podcast &mdash; Nigel Encalada</title>
-<meta name="description" content="Development Talk &mdash; a monthly podcast hosted by Nigel Encalada, in conversation with cultural leaders in heritage and tourism across the Caribbean and beyond.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Marcellus&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<style>:root{ --accent:#4a6d8c; --accent-deep:#334f68; --page-bg:#eef1f4; --page-bg-alt:#f7f9fb; }</style>
-</head>
-<body>
+# Nigel Encalada — Professional Website
 
-<header class="site-header">
-  <div class="inner">
-    <a class="wordmark" href="index.html">Nigel Encalada</a>
-    <nav class="primary" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="blog.html">Blog</a>
-      <a href="podcast.html" aria-current="page">Podcast</a>
-      <a href="career.html">Career</a>
-      <a href="unesco.html">UNESCO</a>
-      <a href="belize.html">Belize</a>
-      <a href="recognition.html">Recognition</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+A simple, elegant static site. Six pages, one stylesheet, no build tools.
+Hosting is free on GitHub Pages; the only optional cost is a custom domain (~$10–15/year).
 
-<main>
-  <section class="band alt">
-    <div class="inner">
-      <p class="eyebrow">The podcast</p>
-      <h2>Development Talk</h2>
-      <div class="prose">
-        <!-- Feel free to rename the show above and rewrite this description. -->
-        <p>A monthly conversation with the people who carry culture forward &mdash;
-        tradition-bearers, curators, ministers, scholars, and community leaders across
-        the Caribbean and beyond. Each episode explores how living heritage is
-        safeguarded, contested, and reinvented, and what it means for the communities
-        who hold it.</p>
-        <p>Hosted by Nigel Encalada. New episodes released monthly.</p>
-      </div>
-    </div>
-  </section>
+## Pages
 
-  <section class="band">
-    <div class="inner">
-      <p class="eyebrow">Episodes</p>
-      <h2>Listen</h2>
+| File | What it is |
+|---|---|
+| `index.html` | Homepage: positioning, featured work, blog teaser |
+| `career.html` | Career narrative + timeline |
+| `unesco.html` | UNESCO & international work (+ photo gallery) |
+| `belize.html` | National leadership in Belize |
+| `blog.html` | Development, Heritage & Tourism blog — **update every ~2 months** |
+| `recognition.html` | Publications, talks, media, affiliations |
+| `style.css` | All design — you shouldn't need to touch it |
 
-      <!-- ==================================================================
-           COMING-SOON BANNER:
-           Delete this whole <div class="coming-soon"> block once you publish
-           your first episode.
-           ================================================================== -->
-      <div class="coming-soon">
-        <p class="cs-label">Launching soon</p>
-        <p>The first episode is in production. Check back monthly, or reach out
-        via the contact details below to suggest a guest.</p>
-      </div>
+## One-time setup (~30 minutes)
 
-      <!-- ==================================================================
-           HOW TO ADD AN EPISODE (your monthly routine):
-           1. Copy one entire <article class="episode"> ... </article> block below.
-           2. Paste it directly UNDER this comment (newest episode on top).
-           3. Change the number, date, guest, title, description, and the two
-              listen links (paste the share links from Spotify / Apple / YouTube).
-           4. If you host the audio as a file, you can instead embed a player &mdash;
-              paste the "embed code" your host gives you in place of the links.
-           Delete the example episode below once you have real ones.
-           ================================================================== -->
+1. **Create a free GitHub account** at github.com.
+2. **Create a new repository.** Click **+** (top right) → *New repository*.
+   Name it exactly `nigelencalada.github.io`. Set it **Public**. *Create repository*.
+3. **Upload the files.** On the repo page, click *uploading an existing file*, drag in
+   everything from this folder (all .html files, style.css, and — later — your images
+   folder). Click *Commit changes*.
+4. Wait 1–2 minutes, then visit `https://nigelencalada.github.io` — your site is live.
 
-      <!-- EXAMPLE EPISODE (delete once you have real episodes) -->
-      <article class="episode" style="opacity:0.55">
-        <div class="ep-num">01</div>
-        <div>
-          <p class="ep-meta">Example &middot; Month 2026</p>
-          <h3>Guest Name &mdash; Episode Title Goes Here</h3>
-          <p>A two-sentence summary of the conversation: who your guest is, what they
-          do, and the heart of what you discussed. This is example text showing how an
-          episode will look once published.</p>
-          <div class="ep-listen">
-            <a href="#">Listen on Spotify</a>
-            <a href="#">Apple Podcasts</a>
-            <a href="#">YouTube</a>
-          </div>
-        </div>
-      </article>
+### Using nigelencalada.com
 
-    </div>
-  </section>
+If you own (or buy) nigelencalada.com:
+1. In the repo: **Settings → Pages → Custom domain** → enter `nigelencalada.com` → Save.
+2. At your domain registrar, add the DNS records GitHub shows you (four A records for
+   the apex, plus a CNAME for www). GitHub guide: docs.github.com/pages → "Managing a
+   custom domain".
+3. Tick **Enforce HTTPS** once available (can take up to a day).
 
-  <section class="band alt">
-    <div class="inner two-col">
-      <div>
-        <p class="eyebrow">Get involved</p>
-        <h2>Suggest a guest</h2>
-      </div>
-      <div class="prose">
-        <p>Know a cultural leader, tradition-bearer, or heritage practitioner whose
-        story should be heard? I&rsquo;m always looking for voices from across the
-        region and the wider world.</p>
-        <p><a class="btn ghost" href="index.html#contact">Get in touch</a></p>
-      </div>
-    </div>
-  </section>
-</main>
+## Your every-two-months routine — the blog (~15 min)
 
-<footer class="site-footer" id="contact">
-  <div class="inner">
-    <div>
-      <p class="contact-name">Nigel Encalada</p>
-      <p>Nigel Encalada is currently a Ph.D. student studying Development, Heritage
-      and Tourism in Small Island Developing States in the Department of Anthropology
-      at the University of South Florida.</p>
-    </div>
-    <div class="links">
-      <a href="mailto:nencalada@usf.edu">nencalada@usf.edu</a>
-      <a href="https://www.linkedin.com/in/nigel-encalada-08b03880/" rel="me">LinkedIn</a>
-    </div>
-    <p class="fineprint">&copy; 2026 Nigel Encalada &middot; All rights reserved</p>
-  </div>
-</footer>
+1. Open your repo on github.com → click `blog.html` → click the **pencil icon**.
+2. Find the comment block `HOW TO ADD A NEW BLOG POST`.
+3. Copy the `<article class="post"> ... </article>` block, paste the copy directly
+   below that comment (newest on top), and change the date, title, and paragraphs.
+4. **Commit changes.** The live site refreshes within a minute or two.
 
-</body>
-</html>
+## Adding photos
+
+1. Create a folder named `images` and upload it to the repo.
+2. On `unesco.html` (or any page), find the `TO ADD PHOTOS` comment and follow it —
+   copy a `<figure>` block, point `src` at your filename, write a caption.
+3. Use landscape photos ~1200px wide, saved as .jpg, for fast loading.
+
+## Tip
+
+You can always paste any of these files back into a chat with Claude, describe the
+change you want (a new blog post, a new project, updated photos), and get the finished
+file back to paste straight into GitHub's editor.
