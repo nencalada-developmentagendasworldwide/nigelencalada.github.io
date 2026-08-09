@@ -7,9 +7,29 @@
 <meta name="description" content="Development Talk &mdash; a monthly podcast hosted by Nigel Encalada, in conversation with cultural leaders in heritage and tourism across the Caribbean and beyond.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Marcellus&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Marcellus&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Sora:wght@700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>:root{ --accent:#4a6d8c; --accent-deep:#334f68; --page-bg:#eef1f4; --page-bg-alt:#f7f9fb; }</style>
+<style>:root{ --accent:#1f5138; --accent-deep:#153d2a; --page-bg:#eef2ea; --page-bg-alt:#f6f8f2; }
+.dt-lockup{ display:inline-block; transform:rotate(-3deg); margin:0.4rem 0 0.7rem; }
+.dt-lockup .row{ display:flex; }
+.dt-lockup .pill{
+  font-family:'Sora',sans-serif; font-weight:800; letter-spacing:-1.5px;
+  font-size:clamp(1.7rem,5.2vw,2.6rem); line-height:1; color:#fff;
+  background:#1f5138; padding:0.42em 0.62em; border-radius:1.1em 1.1em 0 1.1em;
+}
+.dt-lockup .pill2{
+  font-family:'Sora',sans-serif; font-weight:800; letter-spacing:-1.5px;
+  font-size:clamp(1.7rem,5.2vw,2.6rem); line-height:1; color:#12271c;
+  background:#d4a017; padding:0.42em 0.58em; border-radius:0 1.1em 1.1em 1.1em;
+  display:flex; align-items:center; gap:0.5em; margin-top:0.16em;
+}
+.dt-lockup .eq{ display:flex; align-items:flex-end; gap:0.14em; height:0.9em; }
+.dt-lockup .eq i{ width:0.14em; background:#12271c; border-radius:0.1em; display:block; }
+.dt-lockup .eq i:nth-child(1){ height:0.35em; }
+.dt-lockup .eq i:nth-child(2){ height:0.62em; }
+.dt-lockup .eq i:nth-child(3){ height:0.9em; }
+.dt-lockup .eq i:nth-child(4){ height:0.5em; }
+</style>
 </head>
 <body>
 
@@ -33,7 +53,12 @@
   <section class="band alt">
     <div class="inner">
       <p class="eyebrow">The podcast</p>
-      <h2>Development Talk</h2>
+      <div class="dt-lockup" role="img" aria-label="Development Talk">
+        <div class="row"><span class="pill">Development</span></div>
+        <div class="row"><span class="pill2">Talk
+          <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        </span></div>
+      </div>
       <div class="prose">
         <!-- Feel free to rename the show above and rewrite this description. -->
         <p>A monthly conversation with the people who carry culture forward &mdash;
