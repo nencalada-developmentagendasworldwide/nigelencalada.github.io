@@ -15,17 +15,17 @@
 
   /* Per-page background wash — each page may override these two.
      Defaults are the neutral stone/white used on the home page. */
-  --page-bg: #f3f0e9;
-  --page-bg-alt: #fdfcf8;
+  --page-bg: #eef2ea;
+  --page-bg-alt: #f6f8f2;
 
   /* ---- PER-PAGE ACCENT ----
      Each page sets --accent and --accent-deep in its own <style> block.
      Everything colorful (headings' eyebrows, links, card borders, buttons)
      points to these two variables. The defaults below are the "home" teal;
      inner pages override them. --secondary stays constant as a warm counterpoint. */
-  --accent: #1f8f7a;         /* vibrant verdigris — home default */
-  --accent-deep: #146254;
-  --secondary: #c07d2a;      /* warm bronze, shared across pages */
+  --accent: #1f5138;         /* forest green — default */
+  --accent-deep: #153d2a;
+  --secondary: #d4a017;      /* gold, shared across pages */
 
   /* Convenience aliases so older rules keep working */
   --verdigris: var(--accent);
@@ -97,8 +97,15 @@ img { max-width: 100%; display: block; }
   font-family: var(--font-display);
   font-size: 1.15rem; letter-spacing: 0.04em;
   color: var(--ink); text-decoration: none;
+  display: inline-flex; align-items: center;
 }
 .wordmark:hover { color: var(--verdigris-deep); }
+.brand-logo {
+  height: 30px; width: auto; display: block;
+  transition: opacity 160ms ease;
+}
+.wordmark:hover .brand-logo { opacity: 0.78; }
+@media (max-width: 520px){ .brand-logo{ height: 24px; } }
 nav.primary { display: flex; gap: 1.4rem; flex-wrap: wrap; }
 nav.primary a {
   font-family: var(--font-label);
