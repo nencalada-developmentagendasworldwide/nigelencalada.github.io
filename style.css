@@ -350,6 +350,14 @@ footer p, footer a { color: color-mix(in srgb, var(--stone) 82%, transparent); f
 footer a { color: #9ec7ba; }
 footer a:hover { color: var(--white); }
 footer .links { display: grid; gap: 0.4rem; }
+footer .advisor {
+  margin-top: 0.6rem;
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--stone) 70%, transparent);
+}
 footer .fineprint {
   grid-column: 1 / -1;
   border-top: 1px solid color-mix(in srgb, var(--stone) 20%, transparent);
