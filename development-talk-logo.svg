@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 64" role="img" aria-label="Development Talk">
+  <g fill="var(--logo-icon, #4a6d8c)">
+    <rect x="0"  y="26" width="6" height="12" rx="3"/>
+    <rect x="11" y="18" width="6" height="28" rx="3"/>
+    <rect x="22" y="8"  width="6" height="48" rx="3"/>
+    <rect x="33" y="20" width="6" height="24" rx="3"/>
+    <rect x="44" y="28" width="6" height="8"  rx="3"/>
+  </g>
+  <text x="66" y="44" font-family="Sora, 'Segoe UI', sans-serif" font-size="38" font-weight="800" fill="var(--logo-text, #23302e)" letter-spacing="-1.5">Development Talk</text>
+</svg>
